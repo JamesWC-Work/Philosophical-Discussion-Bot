@@ -260,7 +260,7 @@ The bot can be deployed on a cloud platform such as AWS, Azure, or Google Cloud.
 The bot needs to be tested and evaluated to ensure its accuracy and effectiveness in engaging users in philosophical discussions. The testing and evaluation can be done using various metrics, such as precision, recall, F1-score, and user satisfaction rating. The bot can be evaluated using a test set of philosophical texts and conversations and a group of human evaluators who can provide feedback on the bot's performance and usability.
 
 ## What next?
-To create a working prototype of the Philosophical Discussion Bot, we will need to use natural language processing (NLP) and machine learning techniques. Here's a basic outline of the steps involved in building the bot:
+To create a working prototype of the Philosophical Discussion Bot, we will need to use natural language processing (NLP) and machine learning techniques. Example code for each step can be found above under **Protoype**. Here's a basic outline of the steps involved in building the bot:
 
 **Collect and preprocess data:** We will need to collect and preprocess data on various philosophical concepts, theories, and arguments from online sources, such as Stanford Encyclopedia of Philosophy and Philosophy Now magazine. The data will need to be cleaned and formatted for use in our NLP models.
 

@@ -14,8 +14,8 @@ Philosophy is an interesting and important field that deals with fundamental que
 
 The bot can be accessed via a web or mobile application, where users can initiate a conversation with the bot by typing or speaking to it. The bot can ask users questions about their interests, level of knowledge, and preferred topics to provide personalized discussions. The bot can also suggest reading materials, videos, and podcasts related to the discussed topics to enhance users' learning experience.
 
-## Protoype
-Example code snippet demonstrating how to scrape data from the Stanford Encyclopedia of Philosophy using the BeautifulSoup library. This code extracts the text content of the entry on deontological ethics from the Stanford Encyclopedia of Philosophy. You can modify the url variable to scrape data from different entries. After scraping the data, it needs to be preprocessed by cleaning the text and formatting it for use in NLP models. This involves tasks such as removing stop words, stemming, and tokenisation. There are many libraries available in Python for these tasks, including NLTK, spaCy, and gensim.
+## Prototype
+Example code snippet demonstrating how to scrape data from the Stanford Encyclopedia of Philosophy using the BeautifulSoup library. This code extracts the text content of the entry on deontological ethics from the Stanford Encyclopedia of Philosophy. You can modify the URL variable to scrape data from different entries. After scraping the data, it needs to be pre-processed by cleaning the text and formatting it for use in NLP models. This involves tasks such as removing stop words, stemming, and tokenisation. There are many libraries available in Python for these tasks, including NLTK, spaCy, and gensim.
 ```
 def main():
 import requests
@@ -128,7 +128,7 @@ while True:
 main()
 ```
 
-Example code snippet for implementing machine learning algorithms. This code loads preprocessed data and splits it into training and testing sets. It then trains decision trees, support vector machines, and neural network classifiers on the training data and evaluates their performance on the testing data. Finally, it chooses the best classifier based on its accuracy and prints its name and accuracy. This is just an example and the specific machine learning algorithms and methods will depend on the specific requirements and goals of the finalised Philosophical Discussion Bot.
+Example code snippet for implementing machine learning algorithms. This code loads pre-processed data and splits it into training and testing sets. It then trains decision trees, support vector machines, and neural network classifiers on the training data and evaluates their performance on the testing data. Finally, it chooses the best classifier based on its accuracy and prints its name and accuracy. This is just an example and the specific machine learning algorithms and methods will depend on the specific requirements and goals of the finalised Philosophical Discussion Bot.
 ```
 def main():
 import numpy as np
@@ -247,7 +247,7 @@ A starting point of sources and resources required to build the Philosophical La
 * PhilPapers: an online research database of academic philosophy articles, books, and reviews.
 * Open access repositories: such as arXiv, which hosts research papers in various fields, including philosophy.
 * Programming languages: Python, Java, or JavaScript.
-* Natural Language Processing (NLP) frameworks such as spaCy, NLTK, or Stanford CoreNLP for data preprocessing and building NLP models.
+* Natural Language Processing (NLP) frameworks such as spaCy, NLTK, or Stanford CoreNLP for data pre-processing and building NLP models.
 * Conversational AI frameworks such as Rasa, Dialogflow, or IBM Watson Assistant to build the conversational agent.
 * Cloud hosting services such as AWS or Azure to deploy the bot.
 * Version control systems such as Git to manage and track changes in the codebase.
@@ -255,7 +255,7 @@ A starting point of sources and resources required to build the Philosophical La
 * API documentation for third-party services used in the project, such as the Stanford Encyclopedia of Philosophy API or Google Books API.
 * Web development frameworks such as Flask or Django to build the web application for the bot.
 * Database management systems such as MySQL or MongoDB to store and manage the bot's data.
-* Encryption and authentication methods such as Transport Layer Security (TLS),Secure Sockets Layer (SSL), OAuth, JSON Web Tokens (JWT), HTTPS, and/or Two-Factor Authentication (2FA).
+* Encryption and authentication methods such as Transport Layer Security (TLS), Secure Sockets Layer (SSL), OAuth, JSON Web Tokens (JWT), HTTPS, and/or Two-Factor Authentication (2FA).
 
 ## Challenges
 The project has some limitations and ethical considerations that need to be addressed. One challenge is ensuring that the bot's responses are accurate and unbiased, as philosophical concepts and theories can have multiple interpretations and perspectives. Another challenge is maintaining the user's privacy and data security, as the bot may collect personal information during the conversation. 
@@ -281,9 +281,9 @@ The bot needs to be tested and evaluated to ensure its accuracy and effectivenes
 ## What next?
 To create a working prototype of the Philosophical Discussion Bot, we will need to use natural language processing (NLP) and machine learning techniques. Example code for each step can be found above under **Protoype**. Here's a basic outline of the steps involved in building the bot:
 
-**Collect and preprocess data:** We will need to collect and preprocess data on various philosophical concepts, theories, and arguments from online sources, such as Stanford Encyclopedia of Philosophy and Philosophy Now magazine. The data will need to be cleaned and formatted for use in our NLP models.
+**Collect and pre-process data:** We will need to collect and pre-process data on various philosophical concepts, theories, and arguments from online sources, such as Stanford Encyclopedia of Philosophy and Philosophy Now magazine. The data will need to be cleaned and formatted for use in our NLP models.
 
-**Train NLP models:** We will use NLP models, such as sentiment analysis, named entity recognition, and topic modeling, to analyze the collected data and extract useful information. We can use tools like spaCy or NLTK to train and test these models.
+**Train NLP models:** We will use NLP models, such as sentiment analysis, named entity recognition, and topic modeling, to analyse the collected data and extract useful information. We can use tools like spaCy or NLTK to train and test these models.
 
 **Build a conversational agent:** We will use a conversational agent framework, such as Rasa or Dialogflow, to build the bot's conversational flow. The bot will need to be able to recognize user input, generate appropriate responses based on the input, and provide recommendations for reading materials and other resources.
 

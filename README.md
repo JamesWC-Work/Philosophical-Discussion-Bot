@@ -4,7 +4,7 @@ Final project for the University of Helsinki course: Building AI.
 
 ## Summary
 
-The project aims to create a conversational AI bot that can discuss philosophical concepts and theories with users. The bot can engage in discussions, provide insights, and ask questions to promote critical thinking and learning.
+This project explores the creation of a conversational AI bot that can discuss philosophical concepts and theories with users. The aim is to outline the process to create a finalised bot that can engage in discussions, provide insights, and ask questions to promote critical thinking and learning.
 
 ## Background
 

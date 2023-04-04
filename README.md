@@ -14,7 +14,7 @@ Philosophy is an interesting and important field that deals with fundamental que
 
 The bot can be accessed via a web or mobile application, where users can initiate a conversation with the bot by typing or speaking to it. The bot can ask users questions about their interests, level of knowledge, and preferred topics to provide personalized discussions. The bot can also suggest reading materials, videos, and podcasts related to the discussed topics to enhance users' learning experience.
 
-##Protoype
+## Protoype
 Here's an example code snippet that demonstrates how to scrape data from the Stanford Encyclopedia of Philosophy using Python and the BeautifulSoup library:
 ```
 def main():
@@ -34,7 +34,7 @@ print(article)
 main()
 ```
 
-##Demo
+## Demo
 Here's a simple demo of how the Philosophical Discussion Bot works:
 
 **User:** Hi, I'm interested in learning about ethics.

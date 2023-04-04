@@ -47,9 +47,9 @@ The project has some limitations and ethical considerations that need to be addr
 
 The Philosophical Discussion Bot has great potential for growth and further development. Some ways to expand the project could include:
 
-*Integrating more advanced AI techniques: The current version of the bot uses a combination of rule-based and machine learning-based approaches to generate responses. To improve the accuracy and effectiveness of the bot's responses, more advanced AI techniques could be integrated, such as deep learning, reinforcement learning, or unsupervised learning.
-*Incorporating more philosophical topics: The current version of the bot covers a variety of philosophical concepts and theories, but there are many more topics that could be included, such as political philosophy, philosophy of religion, and aesthetics. Adding more topics would make the bot more comprehensive and engaging.
-*Improving user engagement: The current version of the bot provides personalized discussions based on users' interests and knowledge level, but there are other ways to improve user engagement. For example, the bot could include interactive quizzes, games, and simulations to make learning about philosophy more fun and engaging.
+* Integrating more advanced AI techniques: The current version of the bot uses a combination of rule-based and machine learning-based approaches to generate responses. To improve the accuracy and effectiveness of the bot's responses, more advanced AI techniques could be integrated, such as deep learning, reinforcement learning, or unsupervised learning.
+* Incorporating more philosophical topics: The current version of the bot covers a variety of philosophical concepts and theories, but there are many more topics that could be included, such as political philosophy, philosophy of religion, and aesthetics. Adding more topics would make the bot more comprehensive and engaging.
+* Improving user engagement: The current version of the bot provides personalized discussions based on users' interests and knowledge level, but there are other ways to improve user engagement. For example, the bot could include interactive quizzes, games, and simulations to make learning about philosophy more fun and engaging.
 
 To move on with these improvements, further assistance from experts in AI, philosophy, and user experience design could be helpful. Collaboration with philosophers and researchers in the field could also provide valuable insights and feedback for the development of the project. Additionally, user feedback and testing could be conducted to identify areas for improvement and ensure that the bot meets the needs of its users.
 
@@ -57,8 +57,8 @@ To move on with these improvements, further assistance from experts in AI, philo
 
 This project drew inspiration from various sources, including:
 
-*"The Philosophy Book: Big Ideas Simply Explained" by Will Buckingham, Douglas Burnham, and Peter J. King, which provided a comprehensive overview of various philosophical concepts and theories in an accessible way.
-*"The Story of Philosophy" by Will Durant and "The Consolations of Philosophy" by Alain de Botton, which offered insightful perspectives on the history and practical applications of philosophy.
-*"Philosophy Now", a website that publishes articles, interviews, and reviews about philosophy for a general audience.
-*The course "Introduction to Philosophy" by the University of Edinburgh on Coursera, which provided a basic understanding of philosophical concepts and theories.
-*The AI language models developed by OpenAI, which provided powerful natural language processing capabilities for building conversational bots.
+* "The Philosophy Book: Big Ideas Simply Explained" by Will Buckingham, Douglas Burnham, and Peter J. King, which provided a comprehensive overview of various philosophical concepts and theories in an accessible way.
+* "The Story of Philosophy" by Will Durant and "The Consolations of Philosophy" by Alain de Botton, which offered insightful perspectives on the history and practical applications of philosophy.
+* "Philosophy Now", a website that publishes articles, interviews, and reviews about philosophy for a general audience.
+* The course "Introduction to Philosophy" by the University of Edinburgh on Coursera, which provided a basic understanding of philosophical concepts and theories.
+* The AI language models developed by OpenAI, which provided powerful natural language processing capabilities for building conversational bots.

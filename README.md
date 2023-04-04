@@ -306,3 +306,6 @@ This project drew inspiration from various sources, including:
 * "Philosophy Now", a website that publishes articles, interviews, and reviews about philosophy for a general audience.
 * The course "Introduction to Philosophy" by the University of Edinburgh on Coursera, which provided a basic understanding of philosophical concepts and theories.
 * The AI language models developed by OpenAI, which provided powerful natural language processing capabilities for building conversational bots.
+
+## Licence
+JamesWC-Work/Philosophical-Discussion-Bot is licensed under the BSD 3-Clause "New" or "Revised" License.

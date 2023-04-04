@@ -20,13 +20,13 @@ Here's a simple demo of how the Philosophical Discussion Bot works:
 
 **User:** Hi, I'm interested in learning about ethics.
 **Bot:** Great! Ethics is a branch of philosophy that deals with moral principles and values. What would you like to know about ethics?
-**User: **Can you explain the difference between deontology and consequentialism?
+**User:** Can you explain the difference between deontology and consequentialism?
 **Bot:** Sure! Deontology is a moral theory that emphasizes the importance of following moral rules and duties regardless of their consequences. Consequentialism, on the other hand, is a moral theory that emphasizes the importance of the outcomes or consequences of actions in determining their morality. Would you like to discuss more about these theories?
 **User:** Yes, I'm still confused about how to apply them in real-life situations.
-Bot: That's a great question! The application of deontology and consequentialism can be challenging in some situations, as they may conflict with each other. For example, what would you do if you had to choose between lying to save a person's life or telling the truth and risking their life? Would you like to discuss this further?
+**Bot:** That's a great question! The application of deontology and consequentialism can be challenging in some situations, as they may conflict with each other. For example, what would you do if you had to choose between lying to save a person's life or telling the truth and risking their life? Would you like to discuss this further?
 **User:** Yes, I would like to know more about the strengths and weaknesses of these theories.
 **Bot:** Sure! Deontology has the advantage of providing clear and consistent moral rules that apply to all situations, but it can also lead to inflexibility and moral absolutism. Consequentialism has the advantage of promoting the best outcomes for the greatest number of people, but it can also lead to moral relativism and justify immoral actions if they produce good results. Would you like to read more about these theories?
-User: Yes, please recommend some articles or books about ethics.
+**User:** Yes, please recommend some articles or books about ethics.
 **Bot:** Sure! Here are some articles and books about ethics that you might find interesting:
 - "The Nicomachean Ethics" by Aristotle
 - "Groundwork of the Metaphysics of Morals" by Immanuel Kant

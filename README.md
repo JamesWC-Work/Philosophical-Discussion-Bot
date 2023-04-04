@@ -15,7 +15,7 @@ Philosophy is an interesting and important field that deals with fundamental que
 The bot can be accessed via a web or mobile application, where users can initiate a conversation with the bot by typing or speaking to it. The bot can ask users questions about their interests, level of knowledge, and preferred topics to provide personalized discussions. The bot can also suggest reading materials, videos, and podcasts related to the discussed topics to enhance users' learning experience.
 
 ## Protoype
-Here's an example code snippet that demonstrates how to scrape data from the Stanford Encyclopedia of Philosophy using Python and the BeautifulSoup library:
+Example code snippet demonstrating how to scrape data from the Stanford Encyclopedia of Philosophy using the BeautifulSoup library. This code extracts the text content of the entry on deontological ethics from the Stanford Encyclopedia of Philosophy. You can modify the url variable to scrape data from different entries. After scraping the data, it needs to be preprocessed by cleaning the text and formatting it for use in NLP models. This involves tasks such as removing stop words, stemming, and tokenisation. There are many libraries available in Python for these tasks, including NLTK, spaCy, and gensim.
 ```
 def main():
 import requests
@@ -31,6 +31,177 @@ article = soup.find('div', {'id': 'main-text-block'}).text
 
 # Print the article
 print(article)
+main()
+```
+
+Example code for training an NLP model using spaCy. This code trains a text classification model using spaCy's built-in textcat component to classify text into four categories: question, philosopher, philosophy, and doubt. It then defines the training data as a list of tuples, where each tuple contains a text and its corresponding labels. Next it adds the labels to the pipeline and defines the training function using spaCy's begin_training method and minibatch function. Finally, it trains the model with 10 epochs and saves it to disk.
+```
+def main():
+import spacy
+from spacy.util import minibatch, compounding
+import random
+
+# Load the pre-trained model
+nlp = spacy.load("en_core_web_sm")
+
+# Define the training data
+train_data = [("What is the meaning of life?", {"cats": {"question": True}}),
+              ("Socrates was a Greek philosopher", {"cats": {"philosopher": True}}),
+              ("Kant's categorical imperative is a central concept in his moral philosophy", {"cats": {"philosophy": True}}),
+              ("I am not sure whether free will exists or not", {"cats": {"doubt": True}})]
+
+# Add the labels to the pipeline
+if "textcat" not in nlp.pipe_names:
+    textcat = nlp.create_pipe("textcat")
+    nlp.add_pipe(textcat, last=True)
+else:
+    textcat = nlp.get_pipe("textcat")
+
+textcat.add_label("question")
+textcat.add_label("philosopher")
+textcat.add_label("philosophy")
+textcat.add_label("doubt")
+
+# Define the training function
+def train(model, train_data, epochs):
+    optimizer = model.begin_training()
+    losses = {}
+    for epoch in range(epochs):
+        random.shuffle(train_data)
+        batches = minibatch(train_data, size=compounding(4.0, 32.0, 1.001))
+        for batch in batches:
+            texts, annotations = zip(*batch)
+            model.update(texts, annotations, sgd=optimizer, drop=0.2, losses=losses)
+        print("Epoch: ", epoch, " Losses: ", losses)
+
+# Train the model
+train(nlp, train_data, 10)
+
+# Save the trained model
+nlp.to_disk("philosophy_nlp_model")
+main()
+```
+
+Example code using the Rasa framework to build the conversational agent. This code sets up an agent using the trained models, defines a message handler to process user input and generate bot responses, and starts a console-based conversation with the user. You can customize the behavior of the bot by modifying the handle_message function, adding new intents and actions in the Rasa domain file, and retraining the models as needed.
+```
+def main():
+import logging
+from rasa.core.agent import Agent
+from rasa.core.interpreter import RasaNLUInterpreter
+from rasa.core.utils import EndpointConfig
+from rasa.core.channels.console import ConsoleInputChannel
+from rasa.core.channels.channel import UserMessage
+from rasa.core.dispatcher import Dispatcher
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+
+# Load the trained models
+interpreter = RasaNLUInterpreter(model_path="models/nlu")
+action_endpoint = EndpointConfig(url="http://localhost:5055/webhook")
+agent = Agent.load("models/dialogue", interpreter=interpreter, action_endpoint=action_endpoint)
+
+# Define the message handler
+def handle_message(message: UserMessage, dispatcher: Dispatcher):
+    # Parse the user message
+    parse_data = interpreter.parse(message.text)
+    logging.info(f"Parsed user message: {parse_data}")
+
+    # Get the bot response
+    response = agent.handle_message(message.text)
+    logging.info(f"Bot response: {response}")
+
+    # Send the bot response to the user
+    for r in response:
+        dispatcher.utter_message(text=r["text"])
+
+# Start the conversation
+input_channel = ConsoleInputChannel()
+dispatcher = Dispatcher("my-sender-id", input_channel, handle_message)
+while True:
+    try:
+        message = input()
+        dispatcher.process_message(message)
+    except KeyboardInterrupt:
+        logging.info("KeyboardInterrupt detected, stopping conversation.")
+        break
+main()
+```
+
+Example code snippet for implementing machine learning algorithms. This code loads preprocessed data and splits it into training and testing sets. It then trains decision trees, support vector machines, and neural network classifiers on the training data and evaluates their performance on the testing data. Finally, it chooses the best classifier based on its accuracy and prints its name and accuracy. This is just an example and the specific machine learning algorithms and methods will depend on the specific requirements and goals of the finalised Philosophical Discussion Bot.
+```
+def main():
+import numpy as np
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import accuracy_score
+
+# Load preprocessed data
+data = pd.read_csv('preprocessed_data.csv')
+
+# Split data into training and testing sets
+train_data = data.sample(frac=0.8, random_state=42)
+test_data = data.drop(train_data.index)
+
+# Define input and target variables
+train_x = train_data.drop(columns=['target'])
+train_y = train_data['target']
+test_x = test_data.drop(columns=['target'])
+test_y = test_data['target']
+
+# Train decision tree classifier
+dtc = DecisionTreeClassifier()
+dtc.fit(train_x, train_y)
+dtc_pred = dtc.predict(test_x)
+dtc_acc = accuracy_score(test_y, dtc_pred)
+
+# Train support vector machine classifier
+svm = SVC()
+svm.fit(train_x, train_y)
+svm_pred = svm.predict(test_x)
+svm_acc = accuracy_score(test_y, svm_pred)
+
+# Train neural network classifier
+mlp = MLPClassifier()
+mlp.fit(train_x, train_y)
+mlp_pred = mlp.predict(test_x)
+mlp_acc = accuracy_score(test_y, mlp_pred)
+
+# Choose the best classifier
+classifiers = [('Decision Tree', dtc_acc), ('Support Vector Machine', svm_acc), ('Neural Network', mlp_acc)]
+best_classifier = max(classifiers, key=lambda x: x[1])[0]
+
+# Print the best classifier and its accuracy
+print(f'The best classifier is {best_classifier} with an accuracy of {max(classifiers, key=lambda x: x[1])[1]}')
+main()
+```
+
+Example code used as a starting point for deploying the bot on a web application using Flask framework and Heroku cloud platform. This code defines a Flask app with a single endpoint at /message for handling incoming messages. The bot variable is an instance of the ChatbotModel class which generates responses to incoming messages. The handle_message function retrieves the message from the request body, generates a response using the bot variable, and returns the response as a JSON object. Finally, the if __name__ == '__main__' block runs the Flask app. To deploy this app on Heroku, you can create a requirements.txt file with all the dependencies required by your app and a Procfile file that specifies the command to run the app. You can then push the code to a Heroku remote repository and start the app. For more details on deploying Flask apps on Heroku, you can refer to the Heroku documentation: https://devcenter.heroku.com/categories/reference
+```
+def main():
+from flask import Flask, request, jsonify
+import chatbot_model # your chatbot model module
+
+app = Flask(__name__)
+
+# initialize chatbot model
+bot = chatbot_model.ChatbotModel()
+
+# define endpoint for handling incoming messages
+@app.route('/message', methods=['POST'])
+def handle_message():
+    # get message from request body
+    message = request.json['message']
+    # generate response using chatbot model
+    response = bot.generate_response(message)
+    # return response as JSON object
+    return jsonify({'response': response})
+
+if __name__ == '__main__':
+    # run Flask app
+    app.run()
 main()
 ```
 
